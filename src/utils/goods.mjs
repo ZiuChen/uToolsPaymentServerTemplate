@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { generateSignature, obj2param, PLUGIN_ID, SECRET } from './index.mjs'
+import { generateSignature, obj2param, PLUGIN_ID, PLUGIN_SECRET } from './index.mjs'
 
 /**
  * 动态创建商品
@@ -17,7 +17,7 @@ export async function createGoods(fee, title) {
   }
 
   // 对原始数据进行签名
-  data.sign = generateSignature(data, SECRET)
+  data.sign = generateSignature(data, PLUGIN_SECRET)
 
   const url = 'https://open.u-tools.cn/goods?' + obj2param(data)
 

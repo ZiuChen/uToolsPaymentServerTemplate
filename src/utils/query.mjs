@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { generateSignature, obj2param, PLUGIN_ID, SECRET } from './index.mjs'
+import { generateSignature, obj2param, PLUGIN_ID, PLUGIN_SECRET } from './index.mjs'
 
 /**
  * 查询订单支付状态
@@ -15,7 +15,7 @@ export async function queryPayment(orderId) {
   }
 
   // 对原始数据进行签名
-  data.sign = generateSignature(data, SECRET)
+  data.sign = generateSignature(data, PLUGIN_SECRET)
 
   const url = 'https://open.u-tools.cn/payments/record?' + obj2param(data)
 

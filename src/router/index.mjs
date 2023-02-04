@@ -1,13 +1,13 @@
-import express from 'express'
+import { Router } from 'express'
 import { generateSignature, PLUGIN_SECRET } from '../utils/index.mjs'
 
-const Router = express.Router
+// 实例化路由对象
 const router = new Router()
 
 /**
  * @description: 支付成功回调地址
  */
-router.get('/payment', async (req, res) => {
+router.post('/payment', async (req, res) => {
   const { resource, sign } = req.body
 
   if (!resource || !sign) {

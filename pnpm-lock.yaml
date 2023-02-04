@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  body-parser: ^1.20.1
   dotenv: ^16.0.3
   express: ^4.18.2
   node-dev: ^8.0.0
   node-fetch: ^3.3.0
 
 dependencies:
+  body-parser: registry.npmmirror.com/body-parser/1.20.1
   dotenv: registry.npmmirror.com/dotenv/16.0.3
   express: registry.npmmirror.com/express/4.18.2
   node-dev: registry.npmmirror.com/node-dev/8.0.0

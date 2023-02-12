@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { generateSignature, PLUGIN_SECRET } from '../utils/index.mjs'
+import { generateSignature, PLUGIN_SECRET } from '../utils/index.js'
 
 // 实例化路由对象
 const router = new Router()

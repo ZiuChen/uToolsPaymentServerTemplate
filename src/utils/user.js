@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { generateSignature, obj2param, PLUGIN_ID, PLUGIN_SECRET } from './index.mjs'
+import { generateSignature, obj2param, PLUGIN_ID, PLUGIN_SECRET } from './index.js'
 
 /**
  * 获取用户信息
